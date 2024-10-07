@@ -8,7 +8,7 @@ import RootLayout from "@/Component/RootLayout/RootLayout";
 
 export async function getServerSideProps() {
   //Fetch data from API
-  let response = await fetch("http://localhost:3000/api/musics");
+  let response = await fetch(`${process.env.ENV_VARIABLE}/api/musics`);
   let data = await response.json();
   console.log(data);
   return { props: { data } };
