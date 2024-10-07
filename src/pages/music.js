@@ -104,18 +104,22 @@ const Music = (props) => {
           <h1>Music Studio</h1>
           <p>the songs that make me feel you .</p>
           <div className={`${style.music_container}`}>
-            {musicRecords.map((musicRecord, index) => {
-              return (
-                <div className={`${style.music_item_wrapper}`}>
-                  <MusicCard
-                    onClickPlay={onClickPlayListener}
-                    key={musicRecord.songId}
-                    trackDetails={musicRecord}
-                    trackIndex={index}
-                  />
-                </div>
-              );
-            })}
+            {musicRecords ? (
+              musicRecords.map((musicRecord, index) => {
+                return (
+                  <div className={`${style.music_item_wrapper}`}>
+                    <MusicCard
+                      onClickPlay={onClickPlayListener}
+                      key={musicRecord.songId}
+                      trackDetails={musicRecord}
+                      trackIndex={index}
+                    />
+                  </div>
+                );
+              })
+            ) : (
+              <p>Loading</p>
+            )}
           </div>
 
           <AudioComponent
