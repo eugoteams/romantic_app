@@ -1,0 +1,26 @@
+/** @format */
+.container {
+  color: black;
+}
+.bg_image {
+  /* background-image: url("/images/bg_image.jpg");
+  background-repeat: no-repeat;
+  background-color: gray;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; */
+}
+.child_container {
+  background-image: url("/images/bg_image.jpg");
+  background-repeat: no-repeat;
+  background-color: gray;
+  background-position: center;
+  background-size: cover;
+}

@@ -1,0 +1,52 @@
+/** @format */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.5rem;
+  margin: 2rem auto;
+}
+
+.logo {
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 10rem;
+
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.icon {
+  color: #e03131;
+  margin-left: -0.5rem;
+  margin-top: 0.5rem;
+}
+.nav_wrapper_container {
+  flex: 1;
+}
+.nav_container {
+  font-size: 2rem;
+  text-transform: capitalize;
+  width: 35rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav_container > a {
+  text-decoration: none;
+  color: black;
+  flex: 1;
+  text-align: center;
+}
+.nav_container > a:hover {
+  font-weight: 600;
+  transition: all 0.2s ease-in;
+}
