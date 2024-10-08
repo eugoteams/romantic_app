@@ -105,11 +105,13 @@ const Music = (props) => {
   };
 
   const onTabSelectListener = async (tabValue) => {
-    let response = await fetch(
-      `/api/musics?lang=${tabValue.lang}&origin=${tabValue.tabSelected}`
-    );
-    let data = await response.json();
-    setMusicRecords((prevState) => [...data]);
+    if (tabValue.lang !== "" && tabValue.tabSelected !== "") {
+      let response = await fetch(
+        `/api/musics?lang=${tabValue.lang}&origin=${tabValue.tabSelected}`
+      );
+      let data = await response.json();
+      setMusicRecords((prevState) => [...data]);
+    }
   };
 
   return (
