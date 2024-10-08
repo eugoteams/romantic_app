@@ -5,6 +5,7 @@ import style from "../styles/Music.module.css";
 import MusicCard from "@/Component/MusicCard/MusicCard";
 import AudioComponent from "@/Component/UI/AudioComponent/AudioComponent";
 import RootLayout from "@/Component/RootLayout/RootLayout";
+import Spinner from "@/Component/Spinner/Spinner";
 
 export async function getServerSideProps() {
   //Fetch data from API
@@ -116,7 +117,7 @@ const Music = (props) => {
                 );
               })
             ) : (
-              <p>Loading</p>
+              <Spinner />
             )}
           </div>
 
