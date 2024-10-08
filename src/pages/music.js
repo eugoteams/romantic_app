@@ -11,7 +11,7 @@ export async function getStaticProps() {
   //Fetch data from API
   let response = await fetch(`${process.env.ENV_VARIABLE}/api/musics`);
   let data = await response.json();
-  console.log(data);
+
   return { props: { data } };
 }
 
