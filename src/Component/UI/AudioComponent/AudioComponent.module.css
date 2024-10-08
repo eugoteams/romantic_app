@@ -1,7 +1,7 @@
 /** @format */
 
 .container {
-  height: auto;
+  height: 10rem;
   padding-bottom: 1.3rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

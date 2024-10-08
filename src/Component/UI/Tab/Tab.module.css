@@ -1,0 +1,78 @@
+/** @format */
+
+.tab_container {
+  margin: 4rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tab_button_container {
+  width: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tab_button {
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 500;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.tab_button:hover::after {
+  transition: all 0.3s ease-in;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.9rem;
+  left: 0;
+  width: 100%;
+  height: 0.35rem;
+  border-radius: 0.5rem;
+  background-color: #212529;
+  font-weight: 600;
+}
+.tab_button_seleted {
+  position: relative;
+}
+.tab_button_seleted::after {
+  transition: all 0.3s ease-in;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.9rem;
+  left: 0;
+  width: 100%;
+  height: 0.35rem;
+  border-radius: 0.5rem;
+  background-color: #212529;
+  font-weight: 600;
+}
+
+.tab_container {
+  width: 100%;
+  border-bottom: 1px solid #495057;
+}
+
+.select_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 22rem;
+}
+
+.select_label {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-style: italic;
+  font-weight: 600;
+  color: #495057;
+}
+
+.select_wrapper {
+  flex: 1;
+  margin-left: 0.8rem;
+}

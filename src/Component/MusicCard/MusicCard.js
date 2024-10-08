@@ -5,7 +5,6 @@ import style from "./MusicCard.module.css";
 import { Play } from "lucide-react";
 
 const MusicCard = ({ onClickPlay, songId, trackDetails, trackIndex }) => {
-  console.log("render", trackDetails);
   return (
     <Fragment>
       <div className={`${style.container}`}>

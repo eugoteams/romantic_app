@@ -6,19 +6,25 @@ import MusicCard from "@/Component/MusicCard/MusicCard";
 import AudioComponent from "@/Component/UI/AudioComponent/AudioComponent";
 import RootLayout from "@/Component/RootLayout/RootLayout";
 import Spinner from "@/Component/Spinner/Spinner";
+import Select from "@/Component/UI/Select/Select";
+import Tab from "@/Component/UI/Tab/Tab";
+import { tabData } from "@/Utils/Constants";
 
 export async function getStaticProps() {
   //Fetch data from API
-  let response = await fetch(`${process.env.ENV_VARIABLE}/api/musics`);
+  let response = await fetch(
+    `${process.env.ENV_VARIABLE}/api/musics?lang=hindi&origin=indie`
+  );
   let data = await response.json();
 
   return { props: { data } };
 }
 
 const Music = (props) => {
+  // let musicRecords = props.data;
   const [track, setTrackToPlay] = useState({});
+  const [musicRecords, setMusicRecords] = useState([...props.data]);
   const audioRef = useRef();
-  let musicRecords = props.data;
 
   const audioSrcLoader = (songId) => {
     try {
@@ -98,18 +104,34 @@ const Music = (props) => {
     }
   };
 
+  const onTabSelectListener = async (tabValue) => {
+    let response = await fetch(
+      `/api/musics?lang=${tabValue.lang}&origin=${tabValue.tabSelected}`
+    );
+    let data = await response.json();
+    setMusicRecords((prevState) => [...data]);
+  };
+
   return (
     <Fragment>
       <RootLayout>
-        <div>
+        <div className={`${style.container}`}>
+          <Tab
+            data={[...tabData]}
+            onTabSelect={(tabValue) => {
+              onTabSelectListener(tabValue);
+            }}
+          />
           <div className={`${style.music_container}`}>
             {musicRecords ? (
               musicRecords.map((musicRecord, index) => {
                 return (
-                  <div className={`${style.music_item_wrapper}`}>
+                  <div
+                    className={`${style.music_item_wrapper}`}
+                    key={musicRecord.songId}
+                  >
                     <MusicCard
                       onClickPlay={onClickPlayListener}
-                      key={musicRecord.songId}
                       trackDetails={musicRecord}
                       trackIndex={index}
                     />
