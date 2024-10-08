@@ -14,7 +14,7 @@ const RootLayout = ({ children }) => {
   return (
     <Fragment>
       <div className={`${poppins.className} ${styles.container}`}>
-        {/* <div className={`${styles.bg_image}`}></div> */}
+        <div className={`${styles.bg_image}`}></div>
         <Navigation />
         <div className={`${styles.child_container}`}>{children}</div>
       </div>
