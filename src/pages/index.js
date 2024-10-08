@@ -23,25 +23,30 @@ export default function Home() {
   return (
     <Fragment>
       <RootLayout>
-        <div className={`${styles.container}`}>
-          <h1 className={`${styles.title}`}>{APP_NAME}</h1>
-          <p className={`${styles.description}`}>
-            Leنور , Le legend ,Le Myth <br />
-            Le Rolls -Royce of all the human beings.
-          </p>
-          <div className={`${styles.CTA_container}`}>
-            <Link href={"/shayaris"}>
-              <button className={`${styles.action_button}`}>
-                <Music size={14} strokeWidth={3} />
-                <p>music</p>
-              </button>
-            </Link>
-            <Link href={"/music"}>
-              <button className={`${styles.action_button}`}>
-                <BookOpen size={14} strokeWidth={3} />
-                <p>poems</p>
-              </button>
-            </Link>
+        <div className={`${styles.hero_container}`}>
+          <div className={`${styles.hero_text_container}`}>
+            <h1 className={`${styles.title}`}>{APP_NAME}</h1>
+            <p className={`${styles.description}`}>
+              Leنور , Le legend ,Le Myth <br />
+              Le Rolls -Royce of all the human beings.
+            </p>
+            <div className={`${styles.CTA_container}`}>
+              <Link href={"/shayaris"}>
+                <button className={`${styles.action_button}`}>
+                  <BookOpen size={14} strokeWidth={3} />
+                  <p>poems</p>
+                </button>
+              </Link>
+              <Link href={"/music"}>
+                <button className={`${styles.action_button}`}>
+                  <Music size={14} strokeWidth={3} />
+                  <p>music</p>
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className={`${styles.hero_img_container}`}>
+            <div className={`${styles.image_wrapper}`}></div>
           </div>
         </div>
       </RootLayout>

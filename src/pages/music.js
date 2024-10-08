@@ -101,8 +101,6 @@ const Music = (props) => {
     <Fragment>
       <RootLayout>
         <div>
-          <h1>Music Studio</h1>
-          <p>the songs that make me feel you .</p>
           <div className={`${style.music_container}`}>
             {musicRecords ? (
               musicRecords.map((musicRecord, index) => {

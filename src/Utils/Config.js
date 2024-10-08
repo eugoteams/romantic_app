@@ -1,3 +1,3 @@
 /** @format */
 
-export const APP_NAME = "LOGOO";
+export const APP_NAME = "SARAH";

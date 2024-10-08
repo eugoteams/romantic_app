@@ -84,15 +84,19 @@ const Shayaris = (props) => {
     <Fragment>
       <RootLayout>
         <div>
-          {data?.map((poem, _) => {
-            return (
-              <PoetCard
-                key={poem.id}
-                poetry={poem.poetry}
-                meaning={poem.meaning}
-              />
-            );
-          })}
+          {data ? (
+            data?.map((poem, _) => {
+              return (
+                <PoetCard
+                  key={poem.id}
+                  poetry={poem.poetry}
+                  meaning={poem.meaning}
+                />
+              );
+            })
+          ) : (
+            <p>Loading ...</p>
+          )}
         </div>
         <div className={`${style.volume_controller}`}>
           <VolumeControl

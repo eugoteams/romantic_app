@@ -1,8 +1,24 @@
 /** @format */
 .container {
   color: black;
+
+  height: 100%;
 }
 .bg_image {
+  height: 75rem;
+  width: 35rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("/images/bg_image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: none;
+  outline: none;
+  background-blend-mode: luminosity;
+  z-index: -1;
   /* background-image: url("/images/bg_image.jpg");
   background-repeat: no-repeat;
   background-color: gray;
@@ -18,9 +34,9 @@
   z-index: -1; */
 }
 .child_container {
-  background-image: url("/images/bg_image.jpg");
+  /* background-image: url("/images/bg_image.jpg");
   background-repeat: no-repeat;
   background-color: gray;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
 }
