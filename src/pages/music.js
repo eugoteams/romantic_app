@@ -7,7 +7,7 @@ import AudioComponent from "@/Component/UI/AudioComponent/AudioComponent";
 import RootLayout from "@/Component/RootLayout/RootLayout";
 import Spinner from "@/Component/Spinner/Spinner";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   //Fetch data from API
   let response = await fetch(`${process.env.ENV_VARIABLE}/api/musics`);
   let data = await response.json();
