@@ -198,4 +198,20 @@ export const musicDb = [
     feelings: 5,
     songId: "nl23",
   },
+  {
+    songName: "jamal kudu",
+    artists: "Choir",
+    language: "arabic",
+    origin: "international",
+    feelings: 5,
+    songId: "nl24",
+  },
+  {
+    songName: "hoga tumse pyara kaun",
+    artists: "Choir",
+    language: "hindi",
+    origin: "indie",
+    feelings: 5,
+    songId: "l25",
+  },
 ];
